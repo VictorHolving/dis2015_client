@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="Style.css">
+
 <title>Login</title>
 
 </head>
+
 <body>
 
 <div id="Login" class="LogInScreen">
@@ -14,20 +19,38 @@
 
             <!--Log-In header-->
             <div class="header">
-                <h1>Log-In to Play</h1>
+                <h1>Log In to Play</h1>
             </div>
             <!--END header-->
 
             <!--Username & Password fields-->
-            <div class="content">
-                <input name="username" type="text" class="input username required" id="username"
-                       placeholder="Username"/>
-                <input name="password" type="password" class="input password required" id="password"
-                       placeholder="Password"/>
+            <div class="Input">
+                <input name="username" type="text" id="username"
+                       placeholder="UserName"/>
+                <input name="password" type="password" id="password"
+                       placeholder="PassWord"/>
             </div>
             <!--END Input fields-->
 
+                <!--Buttons in footer-->
+                <div class="Bottom">
+
+                    <input name="Login" type="submit" id="LoginButton" value="Login" class="button"/>
+
+                    <a href="indsæt url" id="submit" class="register">
+                        Account Register</a>
+
+                </div>
+        </form>
+        <!--END Buttons-->
+
+</div>
+<!--end login form-->
+</div>
+
 <script>"https://code.jquery.com/jquery-2.1.4.min.js"</script>
+<script src="bootstrap.js"></script>
+
 </body>
 
 </html>
