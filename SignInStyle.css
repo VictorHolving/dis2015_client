@@ -1,6 +1,6 @@
 body {
     font-family: "Shree Devanagari 714";
-    background-color: #fdd0f0;
+    background-image: url("http://hddesktopwallpapers.in/wp-content/uploads/2015/09/snake-wallpaper-hd.jpg");
     padding: auto;
 }
 
@@ -20,7 +20,7 @@ LOGIN FORM
 
 .login-form {
     width: 400px;
-    height: 315px;
+    height: 340px;
     position: relative;
 
     background: #f0eef3;
