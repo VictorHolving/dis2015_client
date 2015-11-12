@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link href="SignUp.css" type="text/css" rel="stylesheet">
     <title>Sign Up</title>
-    <link href="SignUp.css" type="text/css">
 </head>
+
 <body>
 
-<div class="SignUpForm">
+<div class="SignUpWrapper">
 
-    <div class="header">
+    <div class="SignUpForm">
+        <form class="SignUp-Form">
+
+    <div class="SignUpForm" id="header">
         <h1>Enter Information</h1>
     </div>
 
-    <div class="Input">
-        <input name="FirstName" type="text" class="InputFirstName" placeholder="First Name">
-        <input name="LastName" type="text" class="InputLastName" placeholder="Last Name">
-        <input name="Username" type="text" class="InputUsername" placeholder="Username">
-        <input name="Password" type="password" class="InputPassword" placeholder="Password">
+    <div class="SignUpForm" id="input">
+        <input name="FirstName" type="text" class="InputField" placeholder="First Name">
+        <div class="break"></div>
+        <input name="LastName" type="text" class="InputField" placeholder="Last Name">
+        <div class="break"></div>
+        <input name="Username" type="text" class="InputField" placeholder="Username">
+        <div class="break"></div>
+        <input name="Password" type="password" class="InputField" placeholder="Password">
     </div>
 
     <div class="Buttons">
         <input id="SubmitInput" type="button" value="Submit">
-        <a id="Back" href="SignUp.html" type="button" >Back></a>
+        <a id="Back" href="SignIn.html" type="button" >Back></a>
     </div>
+        </form>
 
+    </div>
 </div>
-
 
 
 <script src="bootstrap.js"></script>
 </body>
+
 </html>
