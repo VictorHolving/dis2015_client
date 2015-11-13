@@ -33,13 +33,13 @@ body {
 }
 
 .MenuOptions {
-    align-items: center;
-    left: 20px;
+    position: absolute;
 }
 
-.MenuOptions #StartNewGameButton {
+.MenuOptions .Button {
     padding: 10px 25px;
-    font-family: "Shree Devanagari 714";
+    width: 150px;
+    font-family: "Shree Devanagari 714", sans-serif;
     font-weight: 300;
     color: white;
 
@@ -47,39 +47,25 @@ body {
     border: 1px solid #070707;
     border-radius: 2px;
     cursor: pointer;
-    position: absolute;
-    left: 37.5%;
-}
+    position: relative;
+    left: 80%;
+    margin-bottom: 5px;
 
-.MenuOptions #HighScoreButton {
-    padding: 10px 25px;
-    font-family: "Shree Devanagari 714";
-    font-weight: 300;
-    color: white;
-
-    background: #fdd0f0;
-    border: 1px solid #070707;
-    border-radius: 2px;
-    cursor: pointer;
-    position: absolute;
-    left: 37.5%;
-}
-
-.MenuOptions #SignOutButton {
-    padding: 10px 25px;
-    font-family: "Shree Devanagari 714";
-    font-weight: 300;
-    color: white;
-
-    background: #fdd0f0;
-    border: 1px solid #070707;
-    border-radius: 2px;
-    cursor: pointer;
-    position: absolute;
-    left: 39%;
 }
 
 .MenuOptions #StartNewGameButton:hover {
+    background: #f9f8fb;
+    color: #070707;
+    border: 1px solid rgba(7, 7, 7, 0.75);
+}
+
+.MenuOptions #CreateNewGameButton:hover {
+    background: #f9f8fb;
+    color: #070707;
+    border: 1px solid rgba(7, 7, 7, 0.75);
+}
+
+.MenuOptions #ShowGamesButton:hover {
     background: #f9f8fb;
     color: #070707;
     border: 1px solid rgba(7, 7, 7, 0.75);
@@ -91,7 +77,7 @@ body {
     border: 1px solid rgba(7, 7, 7, 0.75);
 }
 
-.MenuOptions #SignOutButton:hover {
+.MenuOptions #SignOut:hover {
     background: #f9f8fb;
     color: #070707;
     border: 1px solid rgba(7, 7, 7, 0.75);
