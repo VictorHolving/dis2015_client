@@ -1,5 +1,5 @@
 body {
-    font-family: "Shree Devanagari 714";
+    font-family: "Shree Devanagari 714", sans-serif;
     background-image: url("http://hddesktopwallpapers.in/wp-content/uploads/2015/09/snake-wallpaper-hd.jpg");
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .header {
-    font-family: "Shree Devanagari 714";
+    font-family: "Shree Devanagari 714", sans-serif;
     font-size: 14px;
     color: #d09ecf;
     text-shadow: 1px 1px 0 rgb(7, 7, 7);
@@ -50,35 +50,22 @@ body {
     position: relative;
     left: 80%;
     margin-bottom: 5px;
-
 }
 
-.MenuOptions #StartNewGameButton:hover {
-    background: #f9f8fb;
-    color: #070707;
-    border: 1px solid rgba(7, 7, 7, 0.75);
+.MenuOptions #SignOut {
+    font-size: 14px;
+    position: relative;
+    left: 110%;
+    top: 50px;
+    text-decoration: none;
 }
 
-.MenuOptions #CreateNewGameButton:hover {
-    background: #f9f8fb;
-    color: #070707;
-    border: 1px solid rgba(7, 7, 7, 0.75);
-}
-
-.MenuOptions #ShowGamesButton:hover {
-    background: #f9f8fb;
-    color: #070707;
-    border: 1px solid rgba(7, 7, 7, 0.75);
-}
-
-.MenuOptions #HighScoreButton:hover {
+.MenuOptions .Button:hover {
     background: #f9f8fb;
     color: #070707;
     border: 1px solid rgba(7, 7, 7, 0.75);
 }
 
 .MenuOptions #SignOut:hover {
-    background: #f9f8fb;
-    color: #070707;
-    border: 1px solid rgba(7, 7, 7, 0.75);
+    color: #fdd0f0;
 }
