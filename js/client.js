@@ -21,15 +21,9 @@ $(document).ready(function() {
         });
     });
 
-    <!--show games function-->
     $("#ShowGamesButton").click(function () {
-        $.ajax().done(function () {
-            console.log.url("localhost:888/api/games");
-        });
-
+        window.location.replace="html/Games.html"
     });
-
-
 
 
 

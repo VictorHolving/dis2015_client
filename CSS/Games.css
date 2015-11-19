@@ -1,0 +1,40 @@
+body {
+    font-family: "Shree Devanagari 714", sans-serif;
+    background-image: url("http://hddesktopwallpapers.in/wp-content/uploads/2015/09/snake-wallpaper-hd.jpg");
+}
+
+.Games {
+    width: 300px;
+    height: 650px;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+}
+
+#GamesForm {
+    width: 400px;
+    height: 400px;
+    position: relative;
+
+    background: #f0eef3;
+    border: 2px solid #070707;
+    border-radius: 2px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.header {
+    font-family: "Shree Devanagari 714", sans-serif;
+    font-size: 14px;
+    color: #d09ecf;
+    text-shadow: 1px 1px 0 rgb(7, 7, 7);
+    text-align: center;
+    padding: 30px 30px 30px 30px;
+}
+
+
+
+.Footer {
+    position: relative;
+    top: 55%;
+}
