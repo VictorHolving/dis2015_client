@@ -20,9 +20,10 @@ $(document).ready(function() {
             window.location.replace("MainMenu.html");
         });
     });
-        <!--Show games button-->
+
+    <!--Show games button-->
         $("#ShowGamesButton").click(function () {
-            window.location.replace = "html/Games.html";
+            window.location.replace("Games.html");
         });
 
         <!--Show games function-->
@@ -31,11 +32,14 @@ $(document).ready(function() {
             var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "http://localhost:11999/api/game/1/",
+                "url": "http://localhost:11999/api/games/open/",
                 "method": "GET"
             };
 
             $.ajax(settings).done(function (response) {
+
+                console.log(response);
+
                 var trHTML = '';
                 $.each(response, function (i, item) {
                     trHTML += '<tr><td>' + item.id + '</td><td>' + item.host.id + '</td><td>'

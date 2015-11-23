@@ -22,6 +22,26 @@ body {
 
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
+#ShowGames {
+    padding: 10px 25px;
+    width: 150px;
+    font-family: "Shree Devanagari 714", sans-serif;
+    position: relative;
+    left: 31.5%;
+
+    font-weight: 300;
+    color: white;
+    background: #fdd0f0;
+    border: 1px solid #070707;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#ShowGames:hover {
+    background: #f9f8fb;
+    color: #070707;
+    border: 1px solid rgba(7, 7, 7, 0.75);
+}
 
 .header {
     font-family: "Shree Devanagari 714", sans-serif;
@@ -36,6 +56,6 @@ body {
 
 .Footer {
     position: relative;
-    top: 55%;
+    top: 45%;
     left: 85%;
 }
