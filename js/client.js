@@ -38,20 +38,27 @@ $(document).ready(function() {
 
             $.ajax(settings).done(function (response) {
 
-                console.log(response);
-
                 var trHTML = '';
                 $.each(response, function (i, item) {
-                    trHTML += '<tr><td>' + item.id + '</td><td>' + item.host.id + '</td><td>'
+                    trHTML += '<tr><td>' + item.gameId + '</td><td>' + item.host.id + '</td><td>'
                         + item.opponent.id + '</td><td>' + item.name + '</td><td>' + item.created + '</td><td>'
                         + item.winner.id + '</td></tr>';
 
-
-                    $('table').append(trHTML);
+                    $('#GamesTable').append(trHTML);
                     console.log(response);
 
                 });
             });
         });
+
+    $("#DeleteGame").click(function () {
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": 'http://localhost:11999/api/games/' + gameId,
+            "method": "POST"
+        };
+    })
 
 });

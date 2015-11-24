@@ -9,14 +9,31 @@
 <body>
 
 <div class="Games" id="GamesForm">
+
         <div class="header">
             <h1>Games</h1>
             </div>
-        <div class="AllGames">
-            <button id="ShowGames">Show Games</button>
-        </div>
-        <div class="Footer">
 
+        <div class="AllGames">
+
+            <button id="ShowGames">Show Games</button>
+
+            <table id="GamesTable">
+                <tr>
+                    <th>Game ID</th>
+                    <th>Host</th>
+                    <th>Opponent</th>
+                    <th>Game Name</th>
+                    <th>Date Created</th>
+                    <th>Winner</th>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="Footer">
+            <input type="text" id="DeleteGameID" value="Enter GameID"/>
+            <input type="submit" id="DeleteGame" value="Delete Game"/>
             <a href="MainMenu.html" class="BackToMenu"> Back </a>
         </div>
 </div>
