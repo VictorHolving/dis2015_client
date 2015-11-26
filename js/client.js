@@ -12,7 +12,6 @@ $(document).ready(function() {
             "async" : true,
             "url": "http://localhost:11999/api/login/",
             "method": "POST",
-            "processData": false,
             "data" : JSON.stringify(signinInfo)
     };  <!--Refresh site with variable parameters-->
         $.ajax(settings).done(function (response) {
@@ -26,39 +25,57 @@ $(document).ready(function() {
             window.location.replace("Games.html");
         });
 
-        <!--Show games function-->
+    <!--Create game button-->
+    $("#CreateNewGameButton").click(function () {
+        window.location.replace("CreateGame.html");
+    });
+
+    <!--Show games function-->
         $("#ShowGames").click(function () {
 
             var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "http://localhost:11999/api/games/open/",
+                "url": "http://localhost:11999/api/games/open",
                 "method": "GET"
             };
 
             $.ajax(settings).done(function (response) {
 
-                var trHTML = '';
-                $.each(response, function (i, item) {
-                    trHTML += '<tr><td>' + item.gameId + '</td><td>' + item.host.id + '</td><td>'
+                console.log(response);
+
+                response.forEach(function (item) {
+
+                    var trHTML = '<tr><td>' + item.gameId + '</td><td>' + item.host.id + '</td><td>'
                         + item.opponent.id + '</td><td>' + item.name + '</td><td>' + item.created + '</td><td>'
                         + item.winner.id + '</td></tr>';
 
+                    //console.log(trHTML);
                     $('#GamesTable').append(trHTML);
-                    console.log(response);
-
                 });
             });
         });
 
     $("#DeleteGame").click(function () {
 
-        var settings = {
+        var deleteGame = {
+
             "async": true,
             "crossDomain": true,
-            "url": 'http://localhost:11999/api/games/' + gameId,
+            "url": 'http://localhost:11999/api/games/' + $("#DeleteGameID").val(),
             "method": "POST"
         };
-    })
+
+        $.ajax(deleteGame).done(function (response) {
+            console.log(response);
+            alert("Game Deleted");
+
+        });
+    });
+
+
+
+
+
 
 });
