@@ -16,10 +16,11 @@ $(document).ready(function() {
     };  <!--Refresh site with variable parameters-->
         $.ajax(settings).done(function (response) {
             console.log(response);
-            window.location.replace("MainMenu.html");
 
             <!--save id locally-->
-            $.sessionStorage.setItem(id, response.userid);
+            $.sessionStorage.set("id", response.userid);
+
+            window.location.replace("MainMenu.html");
         });
     });
 
@@ -31,6 +32,11 @@ $(document).ready(function() {
     <!--Create game button-->
     $("#CreateNewGameButton").click(function () {
         window.location.replace("CreateGame.html");
+    });
+
+    <!--Join game button-->
+    $("#StartNewGameButton").click(function () {
+        window.location.replace("StartGame.html");
     });
 
     <!--Show games function-->
@@ -73,7 +79,30 @@ $(document).ready(function() {
         $.ajax(deleteGame).done(function (response) {
             console.log(response);
             alert("Game Deleted");
+            window.location.replace("MainMenu.html");
 
+        });
+    });
+
+    <!--Join game function-->
+    $("#JoinGame").click(function () {
+
+        var joingameInfo = {
+
+            gameId: $("#JoinGameID"),
+            opponent: {
+                id : $.sessionStorage.get("id")
+        }};
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": 'http://localhost:11999/api/games/join/',
+            "Method": "POST",
+            "data": JSON.stringify(joingameInfo)
+    };
+        $.ajax(settings).done(function (response) {
+            console.log(response);
         });
     });
 
@@ -85,7 +114,7 @@ $(document).ready(function() {
             name: $("#GameName").val(),
             mapSize: $("#MapSize").val(),
             host: {
-                id: $("id").get(),
+                id: $.sessionStorage.get("id"),
                 controls: $("#Moves").val()
             }};
 
@@ -99,7 +128,8 @@ $(document).ready(function() {
 
         $.ajax(settings).done(function (response) {
             console.log(response);
-            alert("Game Created")
+            alert("Game Created");
+            window.location.replace("MainMenu.html");
         });
 
 

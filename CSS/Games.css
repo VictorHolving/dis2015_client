@@ -64,7 +64,7 @@ body {
 }
 
 .Footer .BackToMenu {
-    position: relative;
+    position: absolute;
     top: 90%;
     right: 5px;
     float: right;
