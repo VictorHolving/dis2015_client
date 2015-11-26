@@ -17,6 +17,9 @@ $(document).ready(function() {
         $.ajax(settings).done(function (response) {
             console.log(response);
             window.location.replace("MainMenu.html");
+
+            <!--save id locally-->
+            $.sessionStorage.setItem(id, response.userid);
         });
     });
 
@@ -56,6 +59,7 @@ $(document).ready(function() {
             });
         });
 
+    <!--Delete game function-->
     $("#DeleteGame").click(function () {
 
         var deleteGame = {
@@ -73,9 +77,33 @@ $(document).ready(function() {
         });
     });
 
+    <!--Create game function-->
+    $("#CreateGame").click(function () {
+
+        var creategameInfo = {
+
+            name: $("#GameName").val(),
+            mapSize: $("#MapSize").val(),
+            host: {
+                id: $("id").get(),
+                controls: $("#Moves").val()
+            }};
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": 'http://localhost:11999/api/games/',
+            "method": "POST",
+            "data": JSON.stringify(creategameInfo)
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            alert("Game Created")
+        });
 
 
 
 
-
+    });
 });

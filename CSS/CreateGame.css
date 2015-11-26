@@ -34,6 +34,8 @@ body {
 
 
 .Input {
+    position: relative;
+    left: 25%;
     width: 145px;
     padding: 15px 25px;
     margin-bottom: 5px;
@@ -50,9 +52,22 @@ body {
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
 }
 
-.Footer .BackToMenu {
+.Input:hover {
+    background: #f9f8fb;
+    color: #070707;
+    border: 1px solid rgba(7, 7, 7, 0.75);
+}
+
+.Footer #BackToMenu {
     position: relative;
     top: 50px;
     Right: 5px;
     float: right;
+}
+
+.Footer #CreateGame {
+    position: relative;
+    top: 50px;
+    left: 5px;
+    float: left;
 }
