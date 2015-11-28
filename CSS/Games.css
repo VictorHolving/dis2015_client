@@ -51,7 +51,7 @@ body {
     color: #d09ecf;
     text-shadow: 1px 1px 0 rgb(7, 7, 7);
     text-align: center;
-    padding: 30px 30px 30px 30px;
+    padding: 20px 30px 30px 30px;
 }
 
 #GamesTable {
@@ -73,10 +73,29 @@ body {
 .Footer #DeleteGameID {
     position: relative;
     top: 90%;
-    float: left;
+    left: 18%;
+    text-align: center;
 }
 
 .Footer #DeleteGame {
     position: relative;
-    float: left;
+    padding: 2px 5px;
+    width: 100px;
+    font-family: "Shree Devanagari 714", sans-serif;
+    left: 20%;
+}
+
+.Footer #JoinGameID {
+    position: relative;
+    top: 90%;
+    text-align: center;
+    left: 18%;
+}
+
+.Footer #JoinGame {
+    position: relative;
+    padding: 2px 5px;
+    width: 100px;
+    font-family: "Shree Devanagari 714", sans-serif;
+    left: 20%;
 }

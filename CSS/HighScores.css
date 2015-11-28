@@ -3,7 +3,7 @@ body {
     background-image: url("http://hddesktopwallpapers.in/wp-content/uploads/2015/09/snake-wallpaper-hd.jpg");
 }
 
-.Games {
+.HighScore {
     width: 300px;
     height: 650px;
     position: Absolute;
@@ -11,7 +11,7 @@ body {
     top: 118px;
 }
 
-#GamesForm {
+#HighScoreForm {
     width: 400px;
     height: 400px;
     position: relative;
@@ -23,12 +23,12 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
-#ShowPendingGames {
+#ShowHighScores {
     padding: 10px 25px;
-    width: 170px;
+    width: 150px;
     font-family: "Shree Devanagari 714", sans-serif;
     position: relative;
-    left: 28.5%;
+    left: 31.5%;
 
     font-weight: 300;
     color: white;
@@ -39,7 +39,7 @@ body {
     margin-bottom: 10px;
 }
 
-#ShowGames:hover {
+#ShowHighScores:hover {
     background: #f9f8fb;
     color: #070707;
     border: 1px solid rgba(7, 7, 7, 0.75);
@@ -51,10 +51,10 @@ body {
     color: #d09ecf;
     text-shadow: 1px 1px 0 rgb(7, 7, 7);
     text-align: center;
-    padding: 20px 30px 30px 30px;
+    padding: 5px 30px 30px 30px;
 }
 
-#PendingGamesTable {
+#HighScoreTable {
     font-family: "Shree Devanagari 714", sans-serif;
     font-size: 10px;
     position: relative;
@@ -68,26 +68,4 @@ body {
     top: 90%;
     right: 5px;
     float: right;
-}
-
-.Footer #PendingGameID {
-    position: relative;
-    top: 90%;
-    left: 2%;
-    text-align: center;
-}
-
-.Footer #Controls {
-    position: relative;
-    top: 90%;
-    left: 3%;
-    text-align: center;
-}
-
-.Footer #StartGame {
-    position: relative;
-    padding: 2px 5px;
-    width: 100px;
-    font-family: "Shree Devanagari 714", sans-serif;
-    left: 4%;
 }
