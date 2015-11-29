@@ -164,7 +164,6 @@ $(document).ready(function() {
             });
         });
     });
-
     <!--Start game function-->
     $("#StartGame").click(function () {
 
@@ -195,7 +194,16 @@ $(document).ready(function() {
             window.location.replace("MainMenu.html");
         });
     });
+    <!--Show highscore function-->
+    $("#ShowHighScores").click(function () {
 
-
-
+        var settings = {
+            "async": true,
+            "url": 'http://localhost:11999/api/scores/',
+            "method": "GET"
+        };
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        })
+    })
 });
