@@ -23,6 +23,7 @@ $(document).ready(function() {
             window.location.replace("MainMenu.html");
         });
     });
+    <!--MENU BUTTONS-->
 
     <!--Show games button-->
         $("#ShowGamesButton").click(function () {
@@ -39,10 +40,12 @@ $(document).ready(function() {
         window.location.replace("StartGame.html");
     });
 
-    <!--Join game button-->
+    <!--Highscores button-->
     $("#HighScoreButton").click(function () {
         window.location.replace("HighScores.html");
     });
+
+    <!--FUNCTIONS-->
 
     <!--Show open games function-->
         $("#ShowGames").click(function () {
@@ -62,9 +65,8 @@ $(document).ready(function() {
 
                     var trHTML = '<tr><td>' + item.gameId + '</td><td>' + item.host.id + '</td><td>'
                         + item.opponent.id + '</td><td>' + item.name + '</td><td>' + item.created + '</td><td>'
-                        + item.winner.id + '</td></tr>';
+                        + '</td></tr>';
 
-                    //console.log(trHTML);
                     $('#GamesTable').append(trHTML);
                 });
             });
@@ -159,7 +161,6 @@ $(document).ready(function() {
                     + item.opponent.id + '</td><td>' + item.name + '</td><td>' + item.created + '</td><td>'
                     + item.winner.id + '</td></tr>';
 
-                //console.log(trHTML);
                 $('#PendingGamesTable').append(trHTML);
             });
         });
@@ -194,16 +195,26 @@ $(document).ready(function() {
             window.location.replace("MainMenu.html");
         });
     });
-    <!--Show highscore function-->
+    <!--Show highscores function-->
     $("#ShowHighScores").click(function () {
 
         var settings = {
             "async": true,
+            "crossDomain": true,
             "url": 'http://localhost:11999/api/scores/',
             "method": "GET"
         };
         $.ajax(settings).done(function (response) {
             console.log(response);
+
+            response.forEach(function (item) {
+
+                var trHTML = '<tr><td>' + item.score + '</td><td>' + item.game.gameId + '</td><td>' +
+                        item.user.username + '</td><td>' + item.game.name + '</td><td>' + item.game.created
+                        + '</td></tr>';
+
+                $('#HighScoreTable').append(trHTML);
+            });
         })
     })
 });
