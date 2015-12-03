@@ -10,7 +10,7 @@ $(document).ready(function() {
         <!--parameters-->
         var settings = {
             "async" : true,
-            "url": "http://localhost:11999/api/login/",
+            "url": Configuration.url+ "login/",
             "method": "POST",
             "data" : JSON.stringify(signinInfo)
     };  <!--Refresh site with variable parameters-->
@@ -53,7 +53,7 @@ $(document).ready(function() {
             var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "http://localhost:11999/api/games/open",
+                "url": Configuration.url + "games/" +"open/",
                 "method": "GET"
             };
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
             "async": true,
             "crossDomain": true,
-            "url": 'http://localhost:11999/api/games/' + $("#DeleteGameID").val(),
+            "url": Configuration.url + "games/" + $("#DeleteGameID").val(),
             "method": "POST"
         };
 
@@ -103,7 +103,7 @@ $(document).ready(function() {
 
         var settings = {
             "async": true,
-            "url": 'http://localhost:11999/api/games/join/',
+            "url": Configuration.url + "games/" + "join/",
             "method": "POST",
             "data": JSON.stringify(joingameInfo)
     };
@@ -129,7 +129,7 @@ $(document).ready(function() {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": 'http://localhost:11999/api/games/',
+            "url": Configuration.url + "games/",
             "method": "POST",
             "data": JSON.stringify(creategameInfo)
         };
@@ -147,7 +147,7 @@ $(document).ready(function() {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": 'http://localhost:11999/api/games/opponent/' + $.sessionStorage.get("id"),
+            "url": Configuration.url + "games/" + "opponent/" + $.sessionStorage.get("id"),
             "method": "GET"
         };
 
@@ -159,7 +159,7 @@ $(document).ready(function() {
 
                 var trHTML = '<tr><td>' + item.gameId + '</td><td>' + item.host.id + '</td><td>'
                     + item.opponent.id + '</td><td>' + item.name + '</td><td>' + item.created + '</td><td>'
-                    + item.winner.id + '</td></tr>';
+                    + item.mapSize + '</td></tr>';
 
                 $('#PendingGamesTable').append(trHTML);
             });
@@ -177,7 +177,7 @@ $(document).ready(function() {
     };
         var settings = {
             "async": true,
-            "url": 'http://localhost:11999/api/games/start',
+            "url": Configuration.url + "games/" + "start/",
             "method": "POST",
             "processData": false,
             "data": JSON.stringify(startgameInfo)
@@ -201,7 +201,7 @@ $(document).ready(function() {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": 'http://localhost:11999/api/scores/',
+            "url": Configuration.url + "scores/",
             "method": "GET"
         };
         $.ajax(settings).done(function (response) {
