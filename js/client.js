@@ -52,7 +52,6 @@ $(document).ready(function() {
 
             var settings = {
                 "async": true,
-                "crossDomain": true,
                 "url": Configuration.url + "games/" +"open/",
                 "method": "GET"
             };
@@ -78,7 +77,6 @@ $(document).ready(function() {
         var deleteGame = {
 
             "async": true,
-            "crossDomain": true,
             "url": Configuration.url + "games/" + $("#DeleteGameID").val(),
             "method": "POST"
         };
@@ -128,7 +126,6 @@ $(document).ready(function() {
 
         var settings = {
             "async": true,
-            "crossDomain": true,
             "url": Configuration.url + "games/",
             "method": "POST",
             "data": JSON.stringify(creategameInfo)
@@ -200,7 +197,6 @@ $(document).ready(function() {
 
         var settings = {
             "async": true,
-            "crossDomain": true,
             "url": Configuration.url + "scores/",
             "method": "GET"
         };
